@@ -5,5 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: check expo fingerprint
     steps:
+      - uses: actions/checkout@v3
+
       - name: expo fingerprint
-        uses: wwdrew/expo-fingerprint-action@v1.3
+        uses: wwdrew/expo-fingerprint-action@v1.4
