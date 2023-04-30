@@ -3,7 +3,7 @@ on: [push]
 jobs:
   fingerprint:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: check expo fingerprint
     steps:
       - name: expo fingerprint
-        uses: wwdrew/expo-fingerprint-action@v1.2
+        uses: wwdrew/expo-fingerprint-action@v1.3
