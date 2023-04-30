@@ -11,4 +11,4 @@ jobs:
       - run: npm ci
 
       - name: expo fingerprint
-        uses: wwdrew/expo-fingerprint-action@v1.4
+        uses: wwdrew/expo-fingerprint-action@v1.5
