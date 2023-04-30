@@ -32,8 +32,8 @@ jobs:
 
       - name: We should build
         if: ${{ steps.fingerprint.outputs.matches == 'false' }}
-        run: echo "Match was ${{ jobs.fingerprint.outputs.matches }}"
+        run: echo "Match was ${{ steps.fingerprint.outputs.matches }}"
 
       - name: We should update
         if: ${{ steps.fingerprint.outputs.matches == 'true' }}
-        run: echo "Match was ${{ jobs.fingerprint.outputs.matches }}"
+        run: echo "Match was ${{ steps.fingerprint.outputs.matches }}"
