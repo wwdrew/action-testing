@@ -1,8 +1,5 @@
 on: [push]
 
-permissions:
-  contents: write
-
 jobs:
   fingerprint:
     runs-on: ubuntu-latest
