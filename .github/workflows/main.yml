@@ -1,7 +1,6 @@
 on: [push]
 
 permissions:
-  repository-projects: write
   actions: write
   contents: write
 
