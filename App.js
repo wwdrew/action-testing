@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>This shouldn't change the fingerprint</Text>
+      <Text>This shouldn't change the fingerprint either</Text>
       <StatusBar style="auto" />
     </View>
   );
