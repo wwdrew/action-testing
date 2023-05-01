@@ -30,10 +30,18 @@ jobs:
         with:
           message: 'Adding expo fingerprint'
 
-      - name: We should build
-        if: ${{ steps.fingerprint.outputs.matches == 'false' }}
-        run: echo "Match was ${{ steps.fingerprint.outputs.matches }}"
+  build:
+    runs-on: ubuntu-latest
+    name: build expo project
+    needs: fingerprint
+    if: ${{ needs.fingerprint.outputs.matches == 'false' }}
+    steps:
+      - run: echo "NEED TO BUILD"
 
-      - name: We should update
-        if: ${{ steps.fingerprint.outputs.matches == 'true' }}
-        run: echo "Match was ${{ steps.fingerprint.outputs.matches }}"
+  update:
+    runs-on: ubuntu-latest
+    name: update expo project
+    needs: fingerprint
+    if: ${{ needs.fingerprint.outputs.matches == 'true' }}
+    steps:
+      - run: echo "NEED TO UPDATE"
